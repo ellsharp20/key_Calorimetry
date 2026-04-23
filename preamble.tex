@@ -1,0 +1,95 @@
+%%% Title
+\title{CHEM 121: Calorimetry}
+\nonstopmode
+%%%
+%%
+%%%General
+\usepackage{verbatim} % For comments and other
+\usepackage{tagpdf}
+\tagpdfsetup{activate-all}
+\tagpdfsetup{math/alt/use}
+%%%
+%%
+%%% Subject Specific
+%% Math
+\usepackage{amsmath}  % For math
+\usepackage{amssymb}  % For more math
+\usepackage{siunitx}  % standardization of si units
+\DeclareSIUnit\Cal{Calorie}
+\DeclareSIUnit\cal{calorie}
+\usepackage{physunits}
+
+\usepackage{unicode-math} % to ensure compatibility to correctly display math symbols
+%%
+%
+%% Chemistry
+\usepackage[version=4]{mhchem} % Package to help with formatting chemical formulae
+%%
+%
+%% Physics
+\usepackage{physics2}  % for simplified dv, and v
+%%
+%
+%%
+%%% Graphics, tables, figures
+%% Graphics
+\usepackage{graphicx} % Required for including pictures
+\usepackage[figurename=Figure]{caption}
+\usepackage{subfig}   % For subfigures
+\usepackage{xcolor,cancel}
+\usepackage{wrapfig}
+%%
+%
+%% Making Figures
+\usepackage{tikz,bm} % Useful for drawing plots
+\usepackage{tikz-3dplot}
+\usepackage{circuitikz}
+%%
+%
+%% Tables
+\usepackage{float} % For tables and other floats
+\usepackage[table]{xcolor} % Setting parameters for how tables will be formatted
+%%
+%
+%%
+%%% General Formatting
+\usepackage{fullpage} % Set margins and place page numbers at bottom center
+\usepackage{paralist} % paragraph spacing
+\usepackage{listings} % For source code
+\usepackage{fancyhdr} % Headers and Footers
+\usepackage{enumitem} % Lists
+\usepackage{url} % url formatting
+\usepackage{titlesec}
+%%%
+%%
+%%% Fonts and characters
+\usepackage{fontspec}
+%%%
+%%
+%%% Setting full document settings
+\setlength{\arrayrulewidth}{0.5mm}
+\setlength{\tabcolsep}{20pt}
+\usepackage[paperheight=279.4mm, paperwidth=215.9mm,
+nomarginpar,% We don't want any margin paragraphs
+textwidth = 177.7mm,
+tmargin = 25.4mm,
+bmargin = 25.4mm,
+headheight = 10mm]% Set \headheight to 10mm%]% Set \headheight to 10mm
+{geometry}
+%% Setting up titles for sections and subsections. Setting up paragraph formatting
+\titleformat{\section}
+{\center\large\bfseries}{}{1em}{}
+
+\titleformat{\subsection}
+{\center\large\bfseries}{}{1em}{}
+
+\titleformat{\subsubsection}
+{\center\normalsize\bfseries}{}{1em}{}
+
+\titleformat{\paragraph}
+{\normalfont\normalsize\mdseries}{}{0em}{}
+%%
+%
+%% Space between paragraphs
+\usepackage[skip=12pt plus1pt, indent=0pt]{parskip}
+%%

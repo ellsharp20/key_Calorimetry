@@ -1,127 +1,89 @@
-%\documentclass[12pt]{article}
+%% Need to keep this so stuff works
+\DocumentMetadata{tagging=on,
+    pdfversion = 2.0,
+    tagging-setup={math/setup=mathml-SE},
+    pdfstandard=ua-2,
+    lang=en-US
+}
+
 \documentclass[12pt, oneside, letterpaper]{book}
-\title{CHEM 121: Nomenclature practice}
-\nonstopmode
-\usepackage{graphicx} % Required for including pictures
-\usepackage[figurename=Figure]{caption}
-\usepackage{float}    % For tables and other floats
-\usepackage{verbatim} % For comments and other
-\usepackage{amsmath}  % For math
-\usepackage{xcolor,cancel}
-
-\usepackage{amssymb}  % For more math
-\usepackage{fullpage} % Set margins and place page numbers at bottom center
-\usepackage{paralist} % paragraph spacing
-\usepackage{listings} % For source code
-\usepackage{subfig}   % For subfigures
-%\usepackage{physics}  % for simplified dv, and 
-\usepackage{wrapfig}
-\usepackage{enumitem} % useful for itemization
-\usepackage{siunitx}  % standardization of si units
-
-\usepackage{tikz,bm} % Useful for drawing plots
-%\usepackage{tikz-3dplot}
-\usepackage{circuitikz}
-\usepackage{url}
-\usepackage[table]{xcolor}
-%Settings parameters for how tables will be formatted
-\setlength{\arrayrulewidth}{0.5mm}
-\setlength{\tabcolsep}{20pt}
-%Package to help with formatting chemical formulae
-\usepackage[version=4]{mhchem}
-
-\usepackage{fontspec}
-\usepackage{gensymb}
-\usepackage{titlesec}
-
-
-\usepackage{fancyhdr}
-
-\usepackage[paperheight=280mm, paperwidth=216mm,
-nomarginpar,% We don't want any margin paragraphs
-textwidth=175mm,% Set \textwidth to 10cm
-headheight=8mm]% Set \headheight to 10mm%]% Set \headheight to 10mm
-{geometry}
-
-\titleformat{\section}
-  {\center\normalfont\normalsize\bfseries}{}{2em}{}
-\titleformat{\subsection}
-{\normalfont\normalsize\bfseries}{}{1em}{}
-\titleformat{\paragraph}
-{\normalfont\normalsize\mdseries}{}{0em}{}
-
-\usepackage[skip=12pt plus1pt, indent=0pt]{parskip}
-
-\setlist[itemize]{noitemsep}
-
+%%
+%
+%%
+%%% DOCUMENT START
+\input{preamble} % Moved to another file for ease of updating
 \begin{document}
-
-% Set the page style to "fancy"...
-\pagestyle{fancy}
+%%
+%
+%%
+%%% Document Setup Settings
+%%
+\pagestyle{fancy} % Set the page style to "fancy"...
 \renewcommand{\headrulewidth}{0pt}
 \fancyhead{}
 \fancyhead[R]{\thepage}
 \fancyfoot{} % clear all footer fields
 \renewcommand{\footrulewidth}{0.1pt}
 \fancyfoot[L]{Truman Science Center}
-\fancyfoot[C]{Calorimetry/Heat Capacity key}
+\fancyfoot[C]{Key: Calorimetry/Heat Capacity}
 \fancyfoot[R]{15 April 2026}
-
-
-\setmainfont{Arial}[Scale=0.9]
-
-\captionsetup{belowskip=1pt}
-\setlength{\jot}{10pt}
-
+%%
+%
+%% Title Set up
 \begin{flushleft}
 	\vspace{.3cm}
-	{\textbf { \Large Calorimetry/Heat Capacity Key}}
+	{\textbf { \Large Key:Calorimetry/Heat Capacity}}
 \end{flushleft}
 \vspace{1mm}
 	\hrule
+%%
+%
+%%
+%%% START TO DOCUMENT TEXT
+%%
+%
+\section{Calorimetry Practice} 
 
-\section{{\normalsize Calorimetry Practice}} 
-
-\flushleft{\normalsize{1) A $97.00\  g$ glass of water at $12.00\  \degree C$ is left on the countertop. The next day the temperature of the water is $23.00\  \degree C$, how much heat (in Joules) was absorbed by the water?}}
+1) A $\qty{97.00}{\degreeCelsius}$ glass of water at $\qty{12.00}{\degreeCelsius}$ is left on the countertop. The next day the temperature of the water is $\qty{23.00}{\degreeCelsius}$, how much heat (in Joules) was absorbed by the water?
 \begin{align*}
 m &= 97.00\ g  
-    &   T_{initial}&=12.00\  \degree C 
-    &  T_{final} &=23.00\ \degree C
+    &   T_{initial}&=\qty{12.00}{\degreeCelsius} 
+    &  T_{final} &=\qty{23.00}{\degreeCelsius} 
 \\ 
 && \Delta T&=T_{final}-T_{initial}
 \\
-&&  \Delta T&=23.00\ \degree C - 12.00\ \degree C 
+&&  \Delta T&=\qty{23.00}{\degreeCelsius} - \qty{12.00}{\degreeCelsius}  
 \\ 
-&& \Delta T &= 11.00\ \degree C
+&& \Delta T &= \qty{11.00}{\degreeCelsius}
 \end{align*}
-We are working with water here, so the heat capacity (c) is $4.184\  \frac{J}{g\  \degree C}$. We want to solve for the heat (Q) absorbed by the water. The heat capacity is the same units as the rest of our information about the water, so we won't need to convert any units. 
+
+We are working with water here, so the heat capacity (c) is $\qty[per-mode=fraction]{4.184}{\joule\per\gram\per\degreeCelsius}$. We want to solve for the heat (Q) absorbed by the water. The heat capacity is the same units as the rest of our information about the water, so we won't need to convert any units. 
 \begin{gather*} 
 Q\ =\  mc\ \Delta T 
 \\ 
-Q\ =\ (97.00\ g) (4.184\ 
-    \frac{J}{g\ \degree C})(11.00\ \degree C) 
+Q\ =\ (\qty{97.00}{\cancel\gram}) (\qty[per-mode=fraction]{4.184}{\joule\per\cancel\gram\per\cancel\degreeCelsius})(\qty{11.00}{\cancel\degreeCelsius}) 
 \\ 
-\boxed{Q\ =\ 4465\ J}
+\boxed{Q\ = \qty{4465}{\joule}}
 \end{gather*}
 \hrule
 
-\flushleft{\normalsize{2) You have a special microwave button that releases $7.78\ kJ$ of heat into your food. You feel like playing Hot Potato so you put a $25\  \degree C$ potato into the microwave and turn it on. When it comes out it is $67\  \degree C$ and it burns your hand. If the specific heat capacity of potatoes is $3.43\  \cfrac{J}{g \degree C}$, what is the mass of the potato?}}
+2) You have a special microwave button that releases $\qty{7.78}{\kilo\joule}$ of heat into your food. You feel like playing Hot Potato so you put a $\qty{25}{\degreeCelsius}$ potato into the microwave and turn it on. When it comes out it is $\qty{67}{\degreeCelsius}$ and it burns your hand. If the specific heat capacity of potatoes is $\qty{3.43}{  \cfrac{\joule}{\gram\degreeCelsius}}$, what is the mass of the potato?
 \begin{align*}
-Q &= 7.78\ kJ  
-    &T_{initial}&=25\  \degree C 
-    &  T_{final} =67\ \degree C
+Q &= \qty{7.78}{\kilo\joule}  
+    &T_{initial}&=\qty{25}{\degreeCelsius} 
+    &  T_{final} =\qty{67}{\degreeCelsius}
 \\ 
-c&=3.43\  \cfrac{J}{g \degree C} 
+c&=\qty[per-mode=fraction]{3.43}{\joule\per\gram\per\degreeCelsius} 
     & \Delta T&=T_{final}-T_{initial}
 \\
-&&  \Delta T&=67\ \degree C - 25\ \degree C 
+&&  \Delta T&=\qty{67}{\degreeCelsius} - \qty{25}{\degreeCelsius} 
 \\ 
-&& \Delta T &= 42\ \degree C
+&& \Delta T &= \qty{42}{\degreeCelsius}
 \end{align*}
 
-The heat capacity of the potato uses $J$, but the heat we are given is in $kJ$, so we must first convert our heat into $J$. We want to find the mass, so we will rearrange our equation to isolate m before plugging in values
+The heat capacity of the potato uses $\si{\joule}$, but the heat we are given is in $\si{\kilo\joule}$, so we must first convert our heat into $J$. We want to find the mass, so we will rearrange our equation to isolate m before plugging in values
 \begin{gather*} 
-7.78\ \cancel{kJ} \cdot \cfrac{1000\ J}{1\ \cancel{kJ}} = 7780\ J 
+\qty{7.78}{\cancel{\kilo\joule}}\cdot \cfrac{\qty{1000}{\joule}}{\qty{1}{\cancel{\kilo\joule}}} = \qty{7780}{\joule} 
 \\
 \left(\cfrac{1}{c\ \Delta T}\right) \cdot Q\ =\ 
     m \cancel{c\ \Delta T} 
@@ -129,24 +91,24 @@ The heat capacity of the potato uses $J$, but the heat we are given is in $kJ$, 
 \\ 
 \cfrac{Q}{c\ \Delta T} = m 
 \\
-\cfrac{7780\ J}{\left(3.43\ \cfrac{J}{g\ \degree C} 
-    \cdot 42\ \degree C \right)} 
+\cfrac{\qty{7780}{\joule}}{\left(\qty[per-mode=fraction]{3.43}{\joule\per\gram\per\degreeCelsius} 
+    \cdot \qty{42}{\degreeCelsius} \right)} 
 \\ 
 \boxed{m\ =\ 54\ g}
 \end{gather*}
 \hrule
 
-\flushleft{\normalsize{3) You left a $3.11\  g$ pure copper penny in your car which the sun heated to $32.00\  \degree C$. When you took the penny out it released $10.78 J$ of heat and its temperature went down to $23.00\ \degree C$. What is the specific heat capacity of Copper?}}
+3) You left a $\qty{3.11}{\gram}$ pure copper penny in your car which the sun heated to $\qty{32.00}{\degreeCelsius}$. When you took the penny out it released $\qty{10.78}{J}$ of heat and its temperature went down to $\qty{23.00}{\degreeCelsius}$. What is the specific heat capacity of Copper?
 \begin{align*}
 m &= 3.11\ g  
-    & T_{initial}&=32.00\  \degree C \
-    & T_{final} &=23.00\ \degree C
+    & T_{initial}&=\qty{32.00}{\degreeCelsius}\ 
+    & T_{final} &=\qty{23.00}{\degreeCelsius}
 \\ 
 Q&= -10.78J & \Delta T&=T_{final}-T_{initial}
 \\
-&&  \Delta T&=23.00\ \degree C - 32.00\ \degree C 
+&&  \Delta T&=\qty{23.00}{\degreeCelsius} - \qty{32.00}{\degreeCelsius} 
 \\ 
-&& \Delta T &= -9.00\ \degree C
+&& \Delta T &= \qty{-9.00}{\degreeCelsius}
 \end{align*}
 
 We are trying to find the specific heat, so we rearrange our equation to isolate $c$.
@@ -157,119 +119,118 @@ We are trying to find the specific heat, so we rearrange our equation to isolate
     \\ 
     c= \cfrac{Q}{m\ \Delta T} 
     \\ 
-    c= \cfrac{-10.78\ J}{(3.11\ g)\ 
-        \cdot \ (-9.00\ \degree C)} 
+    c= \cfrac{\qty{-10.78}{\joule}}{(\qty{3.11}{\gram}) \cdot \ (\qty{-9.00}{\degreeCelsius})} 
     \\ 
-    \boxed{c= 0.385\ \cfrac{J}{g\ \degree C}}
+    \boxed{c= \qty[per-mode=fraction]{0.385}{\joule\per\gram\per\degreeCelsius}}
 \end{gather*}
 \hrule
 
-\flushleft{\normalsize{4) You pick up a $0.24\ kg$ rock from a cold, $50\  \degree F$ natural spring. As it sits in the sun it heats up to $73.4\ \degree F$. It's specific heat capacity is $910\  \frac{mJ}{g \degree C}$, how much heat (in $kJ$) did the rock absorb?}}
+4) You pick up a $\qty{0.24}{\kilo\gram}$ rock from a cold, $50 \Fahrenheit$ natural spring. As it sits in the sun it heats up to $73.4 \Fahrenheit$. It's specific heat capacity is $\qty[per-mode=fraction]{910}{\milli\joule\per\gram\per \degreeCelsius}$, how much heat (in $\si{\kilo\joule}$) did the rock absorb?
 \begin{align*}
-m &= 0.24\ kg  
-& T_{initial}&=50\  \degree F 
-& T_{final} &=73.4\ \degree F 
-& c = 910 \cfrac{mJ}{g\ \degree C} 
+m &= \qty{0.24}{\kilo\gram}  
+& T_{initial}&=\ 50.0\Fahrenheit
+& T_{final} &=\ 73.4\Fahrenheit 
+& c = \qty[per-mode=fraction]{910}{\milli\joule\per\gram\per\degreeCelsius} 
 \end{align*}
-We want to find the heat absorbed in $kJ$. We are going to need to start with several unit conversions our specific heat is in $mJ$, $g$, and $\degree C$. None of the values given in the question are in these units! Lets start by converting our Temperatures to Celsius and our mass to grams. 
+We want to find the heat absorbed in $\si{\kilo\joule}$. We are going to need to start with several unit conversions since our specific heat is in $\si{\milli\joule}$, $\si{\gram}$, and $\si{\degreeCelsius}$. None of the values given in the question are in these units! Lets start by converting our Temperatures to Celsius and our mass to grams. 
 \begin{align*}
-    && \degree C\ &= (\degree F-32)\ 
+    && \si{\degreeCelsius} &= (\Fahrenheit-32)\ 
     \cdot\  \cfrac{5}{9} &&
     \\
     \underline{T_{intial}} 
     &&&& \underline{T_{final}} 
     \\
-    &\degree C = (50-32)\ \cdot\ \cfrac{5}{9} 
-    &&&& \degree C = (73.4-32)\ \cdot\ \cfrac{5}{9} 
+    &\si{\degreeCelsius} = (50-32)\ \cdot\ \cfrac{5}{9} 
+    &&&& \si{\degreeCelsius} = (73.4-32)\ \cdot\ \cfrac{5}{9} 
     \\
-    &T_{intial}= 10\ \degree C 
-    &&&& T_{final}= 23\ \degree C
-    \\
-    \\
+    &T_{intial}= \qty{10}{\degreeCelsius} 
+    &&&& T_{final}= \qty{23.00}{\degreeCelsius}
+\end{align*}
+
+\begin{align*}    
     \underline{\Delta T} 
     &&&& \underline{m}
     \\
-    & \Delta T\ =\ 23\ \degree C - 10\ \degree C 
-    &&&& m\ =\ 0.24 kg\ \cdot \cfrac{1000\ g}{1\ kg}\ = 240 g
+    & \Delta T\ = \qty{23}{\degreeCelsius} - \qty{10}{\degreeCelsius} 
+    &&&& m\ =\qty{0.24}{\kilo\gram} \cdot \cfrac{\qty{1000}{\gram}}{\qty{1}{\kilo\gram}}\ = \qty{240}{\gram}
     \\
-    & \Delta T\ =\ 13 \degree C 
-    &&&& m\ =\ 240\ g    
+    & \Delta T\ =\qty{13}{\degreeCelsius} 
+    &&&& m\ = \qty{240}{\gram}    
 \end{align*}
+
 \begin{gather*}
     Q\ =\ mc\ \Delta T
     \\
-    Q\ =\ (240\ \cancel{g})  
-        \cdot \left(910\ \cfrac{mJ}{\cancel{g\ \degree C}} \right) 
-        \cdot (13\  \cancel{\degree C})
+    Q\ =\ (\qty{240}{\cancel\gram})  
+        \cdot \left(\cfrac{\qty{910}{\milli\joule}}{\cancel{\si{\gram\degreeCelsius}}} \right) 
+        \cdot (\qty{23.00}{\cancel \degreeCelsius})
     \\
-    Q\ =\ 2.84\ \cdot\ 10^6\  mJ
+    Q\ =\qty{2.84e6}{\milli\joule}
 \end{gather*}
-The question specifies that our answer should be in $kJ$, so we will need to convert the heat above to the correct units
+The question specifies that our answer should be in $\si{\kilo\joule}$, so we will need to convert the heat above to the correct units
 \begin{gather*}
-    2.84\ \cdot\ 10^6\  mJ\ \cdot\ 
-        \cfrac{1\ J}{1000\ mJ}\ \cdot\ 
-        \cfrac{1\ kJ}{1000\ J} 
+    \qty{2.84e6}{\milli\joule}  \cdot\ 
+    \cfrac{\qty{1}{\joule}}{\qty{1000}{\milli\joule}}\   \cdot\ 
+    \cfrac{\qty{1}{\kilo\joule}}{\qty{1000}{\joule}} 
     \\
-    \boxed{Q\ =\ 2.84\ kJ}
+    \boxed{Q\ = \qty{2.84}{\kilo\joule}}
 \end{gather*}
-
 \hrule 
-
-\flushleft{\normalsize{5) You heat up a cast iron skillet that has a mass of $2.23\  kg$ to a temperature of $218\  \degree C$. How many $kJ$ are released from the skillet when it cools to room temperature $(22\  \degree C)$? The specific heat capacity of cast iron is $0.461\  \cfrac{J}{g \degree C}$}}
+5) You heat up a cast iron skillet that has a mass of $\qty{2.23}{\kilo\gram}$ to a temperature of $\qty{218}{\degreeCelsius}$. How many $\si{\kilo\joule}$ of energy are released from the skillet when it cools to room temperature ($\qty{22}{\degreeCelsius})$? The specific heat capacity of cast iron is $\qty[per-mode=fraction]{0.461}{\joule\per\gram\per\degreeCelsius}$
 \begin{align*}
- m &= 2.23\ kg  
-    & T_{initial}&= 218\  \degree C 
-    & T_{final} &= 22\ \degree C 
-    & c = 0.461 \cfrac{J}{g\ \degree C} 
+ m &= \qty{2.23}{\kilo\gram}  
+    & T_{initial}&= \qty{218}{\degreeCelsius} 
+    & T_{final} &= \qty{22}{\degreeCelsius} 
+    & c = \qty[per-mode=fraction]{0.461}{\joule\per\gram\per\degreeCelsius} 
  \\
- \Delta T &= 218\ \degree C - 22\ \degree C
+ \Delta T &= \qty{218}{\degreeCelsius} - \qty{22}{\degreeCelsius}
  \\
- \Delta T &= 196\ \degree C
+ \Delta T &= \qty{196}{\degreeCelsius}
 \end{align*}
-The question is asking for the heat released in $kJ$, but our specific heat is in Joules, so we will need to convert our answer to the correct units. The mass we are given is in $kg$, but our specific heat is in grams, so we will need to start by converting the mass into grams.
+The question is asking for the heat released in $\si{\kilo\joule}$, but our specific heat is in Joules, so we will need to convert our answer to the correct units. The mass we are given is in $\si{\kilo\gram}$, but our specific heat is in grams, so we will need to start by converting the mass into grams.
 
 \begin{gather*}
-    2.23\ kg\ \cdot\ \cfrac{1000 g}{1\ kg} 
+    \qty{2.23}{\cancel{\kilo\gram}}\ \cdot\ \cfrac{\qty{1000}{\gram}}{\qty{1}{\cancel{\kilo\gram}}} 
     \\
-    m\ =\ 2230\ g
+    m\ = \qty{2230}{\gram}
     \\
     \\
     Q\ =\ mc\ \Delta T
     \\
-    Q\ =\ (2230\ \cancel{g})  
-        \cdot \left(0.461\ \cfrac{J}{\cancel{g\ \degree C}} \right) 
-        \cdot (196\  \cancel{\degree C})
+    Q\ =\ (\qty{2230}{\cancel\gram})  
+        \cdot \left(\cfrac{\qty{0.461}{\joule}}{\cancel{\si{\gram\degreeCelsius}}} \right) 
+        \cdot (\qty{196}{\cancel \degreeCelsius})
     \\
-    Q\ =\ -2.01\ \cdot\ 10^5\ J
+    Q\ = \qty{-2.01e5}{\joule}
     \\
     \\
-    -2.01\ \cdot\ 10^5\ J \cdot\ 
-        \left(\cfrac{1\ kJ}{1000\ J} \right)
+    \qty{-2.01e5}{\cancel{\joule}} \cdot\ 
+        \left(\cfrac{\qty{1}{\kilo\joule}}{\qty{1000}{\cancel{\joule}}} \right)
     \\
-    \boxed{Q\ =\ 201\ kJ}
+    \boxed{Q\ =\qty{201}{\kilo\joule}}
 \end{gather*}
 
 \hrule
 
-\flushleft{\normalsize{6) It takes $874.6\  kJ$ to heat up $3.12\  kg$ of water to its boiling point at $100\  \degree C$. What was the initial temperature of the water?}}
+6) It takes $\qty{874.6}{\kilo\joule}$ to heat up $\qty{3.12}{\kilo\gram}$ of water to its boiling point at $\qty{100}{\degreeCelsius}$. What was the initial temperature of the water?
 \begin{align*}
- m &= 2.23\ kg  
-    & Q &=874.6\ kJ 
-    & T_{final} &= 22\ \degree C 
-    & c_{water} = 4.184\  \cfrac{J}{g\ \degree C} 
+ m &= \qty{2.23}{\kilo\gram}  
+    & Q &=\qty{874.6}{\kilo\joule} 
+    & T_{final} &= \qty{100}{\degreeCelsius} 
+    & c_{water} = \qty{4.184}{\joule\per\gram\per\degreeCelsius} 
 \end{align*}
 The specific heat of water is always the same, so even though it is not given in the question, we need to provide that information. The mass and heat need to be converted, so their units match our specific heat's units. 
 \begin{align*}
     \underline{m} 
     &&&& \underline{Q} 
     \\
-    & m = 3.12\ \cancel{kg} 
-        \cdot\  \left(\cfrac{1000\ g}{1\ \cancel{kg}} \right) 
-    &&&& 874.6\ \cancel{kJ}\  
-        \cdot\  \left(\cfrac{1000\ J}{1\ \cancel{kJ}} \right)
+    & m = \qty{3.12}{\cancel{\kilo\gram}} 
+        \cdot\  \left(\cfrac{\qty{1000}{\gram}}{\qty{1}{\cancel{\kilo\gram}}} \right) 
+    &&&& \qty{874.6}{\cancel{\kilo\joule}}\  
+        \cdot\  \left(\cfrac{\qty{1000}{\joule}}{\qty{1}{\cancel{\kilo\joule}}} \right)
     \\
-    & m= 3120\ g 
-    &&&& Q= 8.746\ \cdot\ 10^5\  J  
+    & m= \qty{3120}{\gram} 
+    &&&& Q= \qty{8.746e5}{\joule}  
 \end{align*}
 \begin{gather*}
     Q=mc\ \Delta T 
@@ -280,42 +241,35 @@ The specific heat of water is always the same, so even though it is not given in
         \cancel{mc}\ (T_f - T_i) \cdot 
         \left(\cfrac{1}{\cancel{mc}} \right)
     \\
-    \\
      \left(\cfrac{Q}{mc} \right) - T_f = 
         (\cancel{T_f} - T_i) - \cancel{T_f}
-    \\
     \\
     (-1) \cdot \left(T_f - \cfrac{Q}{mc} \right) = 
     (- T_i) \cdot (-1)
     \\
-    \\
     T_i = T_f - \cfrac{Q}{mc}
     \\
-    T_i = 100\ \degree C - 
-        \cfrac{8.74\ \cdot\ 10^5\ J}{(3120\ g) 
-        \left(4.184\ \cfrac{J}{g\ \degree C} \right)}
+    T_i = \qty{100}{\degreeCelsius} - 
+        \cfrac{\qty{8.746e5}{\joule}}
+        {(\qty{3120}{\gram}) 
+        \left(\qty{4.184}{\joule\per\gram\per\degreeCelsius} \right)}
     \\
-    T_i = 33\ \degree C
+    T_i = \qty{33}{\degreeCelsius}
 \end{gather*}
 
 \newpage
 
 \section{More Challenging Calorimetry Problems}
 
-\flushleft{\normalsize{7) A metal object releases $67.78\  kJ$ of energy into $300\  mL$ of water at $23\ \degree C$. What temperature does the water rise to assuming the density of water is $1.00\  \cfrac{g}{mL}$}}
-\vspace{5cm}
+7) A metal object releases $\qty{67.78}{\kilo\joule}$ of energy into $\qty{300} {\mL}$ of water at $\qty{23} {\degreeCelsius}$. What temperature does the water rise to assuming the density of water is $\qty[per-mode=fraction]{1}{\gram\per{\milli\liter}}$
 
-\flushleft{\normalsize{8) When you set a Dorito on fire over a can of $50.0\ g$ of water, it releases $12.72\ Cal$ of energy. Assuming all of the energy goes into the water (and none into the can) what is the rise in temperature of the water?}}
-\vspace{5cm}
+8) When you set a Dorito on fire over a can of $\qty{50.0} {\gram}$ of water, it releases $\qty{12.72}{\Cal}$ of energy. Assuming all of the energy goes into the water (and none into the can) what is the rise in temperature of the water?
 
-\flushleft{\normalsize{9) a $20.0\ g$ sample of a metal alloy at $82.0\ \degree C$ is placed into $80.0\ g$ of water at $25.3\ \degree C$. The final temperature of the water is $29.3\ \degree C$. Assuming there is no loss of heat to the surroundings, calculate the heat capacity of the alloy.}}
-\vspace{5cm}
+9) a $\qty{20.0}{\gram}$ sample of a metal alloy at $\qty{82.0}{\degreeCelsius}$ is placed into $\qty{80.0}{\gram}$ of water at $\qty{25.3}{\degreeCelsius}$. The final temperature of the water is $\qty{29.3}{\degreeCelsius}$. Assuming there is no loss of heat to the surroundings, calculate the heat capacity of the alloy.
 
-\flushleft{\normalsize{10) $250\ mL$ of water at $93\ \degree C$ is mixed with $100\ mL$ fo water at $23\ \degree C$. Calculate the final temperature of this mixture.}}
-\newpage
+10) $\qty{250}{\mL}$ of water at $\qty{93}{\degreeCelsius}$ is mixed with $\qty{100}{\mL}$ fo water at $\qty{23} {\degreeCelsius}$. Calculate the final temperature of this mixture.
 
-\flushleft{\normalsize{11) $30.5\ g$ of metal at $105.0\ \degree C$ is placed into $200\ mL$ of water at $24.00\ \degree C$. If the final temperature of the water is $25.1\ \degree C$, calculate the specific heat of the metal and identify it.}}
-\vspace{5cm}
+11) $\qty{30.5}{\gram}$ of metal at $\qty{105.0}{\degreeCelsius}$ is placed into $\qty{200}{\mL}$ of water at $\qty{24.00} {\degreeCelsius}$. If the final temperature of the water is $\qty{25.1}{\degreeCelsius}$, calculate the specific heat of the metal and identify it.
 
-\flushleft{\normalsize{12) An unknown mass of iron at $100\ \degree C$ is placed in an isolated cup containing $75.0\ mL$ of water at $40.0\ \degree C$. The final temperature of the iron bolt is $41.3\ \degree C$. Assuming that the heat capacity of the container is negligible, calculate the mass of the iron bolt.}}
+12) An unknown mass of iron at $\qty{100}{\degreeCelsius}$ is placed in an isolated cup containing $\qty{75.0}{\mL}$ of water at $\qty{40.0}{\degreeCelsius}$. The final temperature of the iron bolt is $\qty{41.3}{\degreeCelsius}$. Assuming that the heat capacity of the container is negligible, calculate the mass of the iron bolt.
 \end{document}
