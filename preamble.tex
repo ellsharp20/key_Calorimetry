@@ -15,8 +15,8 @@
 \usepackage{amsmath}  % For math
 \usepackage{amssymb}  % For more math
 \usepackage{siunitx}  % standardization of si units
-\DeclareSIUnit\Cal{Calorie}
-\DeclareSIUnit\cal{calorie}
+\DeclareSIUnit\Calorie{Cal}
+\DeclareSIUnit\calorie{cal}
 \usepackage{physunits}
 
 \usepackage{unicode-math} % to ensure compatibility to correctly display math symbols
@@ -53,6 +53,7 @@
 %
 %%
 %%% General Formatting
+\usepackage{ragged2e} %text alignment commands
 \usepackage{fullpage} % Set margins and place page numbers at bottom center
 \usepackage{paralist} % paragraph spacing
 \usepackage{listings} % For source code
@@ -77,6 +78,14 @@ bmargin = 25.4mm,
 headheight = 10mm]% Set \headheight to 10mm%]% Set \headheight to 10mm
 {geometry}
 %% Setting up titles for sections and subsections. Setting up paragraph formatting
+\newcommand{\styleTitle}[1] {
+	\vspace{.3cm}
+    \begin{flushleft}
+       \textbf{\Large{#1}}
+    \end{flushleft}
+\vspace{1mm}
+	\hrule}
+
 \titleformat{\section}
 {\center\large\bfseries}{}{1em}{}
 
